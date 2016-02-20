@@ -1,0 +1,100 @@
+getwd()
+setwd("/Users/ricardohdz/projects/afore-analytics")
+install.packages("xlsx")
+library("xlsx")
+data = read.xlsx("b4_formatted.xls", sheetIndex=1)
+data =read.csv("b4_csv.csv")
+ls
+data
+ls
+clear
+clr
+clr()
+data =read.csv("b4_csv.csv")
+data
+mean(data$1)
+mean(data$Bancomer)
+mean(data$Sep.12)
+summary(data)
+mean(data$Afore)
+mean(data$Feb.11)
+table(data$Afore)
+table(data$Abr.2015)
+coppel = subset(data, Afore == "Coppel")
+coppel
+table(coppel)
+summary(coppel)
+coppel
+coppel$Ene.2011
+mean(coppel)
+data = read.csv("b4.csv")
+summary(data)
+data$Afirme.Bajio
+mean(data$Afirme.Bajio)
+na.omit(data)
+summary(data)
+mean(data$Afirme.Bajio, na.rm=TRUE)
+str(data)
+dat$Afirme.Bajio
+data$Afirme.Bajio
+data$Azteca
+data = read.csv("b4.csv")
+summary(data)
+dat$Afirme.Bajio
+data$Afirme.Bajio
+data$Azteca
+dataomit = na.omit(data)
+dataomit
+summary(dataomit)
+data = read.csv("b4.csv")
+summary(data)
+hist(data$SURA)
+tapply(data$SURA, data$Date, mean)
+tapply(data$Date, data$SURA, mean)
+tapply(data$Date, data$SURA)
+plot(data$SURA, data$Banamex)
+hist(data$SURA)
+boxplot(dat$SURA ~ data$Date)
+boxplot(data$SURA ~ data$Date)
+which.min(data$SURA)
+mean(data)
+mean(data$SURA, data$Banamex)
+table(data$SURA, data$Banamex)
+plot(data$SURA)
+plot(data$SURA, data$Date)
+boxplot(data$SURA, data$Date)
+boxplot(data$Date, data$Sura)
+hist(data$Sura)
+hist(data$SURA)
+boxplot(data$SURA, data$Date)
+plot(data$SURA)
+boxplot(data$SURA, data$Date)
+boxplot(data$SURA, data$Date, type="p")
+boxplot(data$SURA, data$Date, type="h")
+plot(data$SURA, type="h")
+boxplot(data$SURA ~ data$Date)
+boxplot(data$SURA ~ data$Date)
+hist(data$SURA)
+plot(data$SURA)
+plot(data$SURA, data$Date)
+plot(data$Date, data$SURA)
+plot(data$Date, data$SURA, type="p")
+plot(data$Date, data$SURA, type="o")
+data = read.csv("b4.csv")
+summary(data)
+data$Date <- as.Date(data$Date, "%m/-/%y")
+data$Date
+data = read.csv("b4.csv")
+summary(data)
+data$Date
+data$Date <- as.Date(data$Date, "%m/%d/%y")
+data$Date
+plot(data$SURA, data$Date)
+plot(data$Date, data$SURA)
+plot(Afirme.Bajio ~ Azteca)
+plot(Afirme.Bajio ~ Azteca, data)
+plot(Afirme.Bajio ~ Azteca, data$Date)
+plot(data$Afirme.Bajio ~ data$Azteca, data$Date)
+plot.ts(data)
+plot.ts(data$SURA, data$Banamex)
+plot.ts(data$SURA, data$Date)

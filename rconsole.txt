@@ -1,0 +1,47 @@
+> data = read.csv("b4.csv")
+> summary(data)
+      Date     Afirme.Bajio        Azteca          Banamex         Bancomer      Banorte.Generali     Coppel           HSBC          Inbursa     
+ 1/1/11 : 1   Min.   : 5.130   Min.   : 4.970   Min.   : 6.35   Min.   : 5.470   Min.   :4.490    Min.   :4.940   Min.   :5.880   Min.   :5.120  
+ 1/1/12 : 1   1st Qu.: 6.815   1st Qu.: 8.330   1st Qu.:10.96   1st Qu.: 9.697   1st Qu.:5.508    1st Qu.:7.470   1st Qu.:6.560   1st Qu.:5.920  
+ 1/1/13 : 1   Median : 8.740   Median : 8.630   Median :11.28   Median :11.720   Median :7.375    Median :7.840   Median :7.360   Median :6.250  
+ 1/1/14 : 1   Mean   : 8.074   Mean   : 8.831   Mean   :11.52   Mean   :10.907   Mean   :7.168    Mean   :7.835   Mean   :7.827   Mean   :6.191  
+ 1/1/15 : 1   3rd Qu.: 8.970   3rd Qu.: 9.720   3rd Qu.:12.79   3rd Qu.:13.010   3rd Qu.:8.810    3rd Qu.:8.580   3rd Qu.:9.592   3rd Qu.:6.460  
+ 1/1/16 : 1   Max.   :10.340   Max.   :11.560   Max.   :15.20   Max.   :13.630   Max.   :9.840    Max.   :9.700   Max.   :9.870   Max.   :6.960  
+ (Other):55   NA's   :22                                        NA's   :35       NA's   :49                       NA's   :53                     
+    Invercap        Metlife      PensionISSSTE     Principal     Profuturo.GNP        SURA        XXI.Banorte   
+ Min.   : 3.89   Min.   : 5.55   Min.   : 4.35   Min.   : 5.66   Min.   : 6.54   Min.   : 7.18   Min.   : 5.97  
+ 1st Qu.: 9.54   1st Qu.:10.23   1st Qu.:10.47   1st Qu.: 9.46   1st Qu.:10.83   1st Qu.:11.84   1st Qu.: 9.85  
+ Median :10.70   Median :10.56   Median :10.97   Median : 9.95   Median :11.17   Median :12.18   Median :10.38  
+ Mean   :11.32   Mean   :10.86   Mean   :10.67   Mean   :10.47   Mean   :11.37   Mean   :12.21   Mean   :10.52  
+ 3rd Qu.:14.04   3rd Qu.:12.38   3rd Qu.:11.54   3rd Qu.:12.37   3rd Qu.:12.29   3rd Qu.:13.39   3rd Qu.:11.73  
+ Max.   :16.30   Max.   :13.71   Max.   :12.66   Max.   :13.38   Max.   :14.16   Max.   :15.06   Max.   :12.80  
+                                 NA's   :2                                                                      
+> data$Date
+ [1] 1/1/11  2/1/11  3/1/11  4/1/11  5/1/11  6/1/11  7/1/11  8/1/11  9/1/11  10/1/11 11/1/11 12/1/11 1/1/12  2/1/12  3/1/12  4/1/12  5/1/12  6/1/12  7/1/12 
+[20] 8/1/12  9/1/12  10/1/12 11/1/12 12/1/12 1/1/13  2/1/13  3/1/13  4/1/13  5/1/13  6/1/13  7/1/13  8/1/13  9/1/13  10/1/13 11/1/13 12/1/13 1/1/14  2/1/14 
+[39] 3/1/14  4/1/14  5/1/14  6/1/14  7/1/14  8/1/14  9/1/14  10/1/14 11/1/14 12/1/14 1/1/15  2/1/15  3/1/15  4/1/15  5/1/15  6/1/15  7/1/15  8/1/15  9/1/15 
+[58] 10/1/15 11/1/15 12/1/15 1/1/16 
+61 Levels: 1/1/11 1/1/12 1/1/13 1/1/14 1/1/15 1/1/16 10/1/11 10/1/12 10/1/13 10/1/14 10/1/15 11/1/11 11/1/12 11/1/13 11/1/14 11/1/15 12/1/11 ... 9/1/15
+> data$Date <- as.Date(data$Date, "%m/%d/%y")
+> data$Date
+ [1] "2011-01-01" "2011-02-01" "2011-03-01" "2011-04-01" "2011-05-01" "2011-06-01" "2011-07-01" "2011-08-01" "2011-09-01" "2011-10-01" "2011-11-01" "2011-12-01"
+[13] "2012-01-01" "2012-02-01" "2012-03-01" "2012-04-01" "2012-05-01" "2012-06-01" "2012-07-01" "2012-08-01" "2012-09-01" "2012-10-01" "2012-11-01" "2012-12-01"
+[25] "2013-01-01" "2013-02-01" "2013-03-01" "2013-04-01" "2013-05-01" "2013-06-01" "2013-07-01" "2013-08-01" "2013-09-01" "2013-10-01" "2013-11-01" "2013-12-01"
+[37] "2014-01-01" "2014-02-01" "2014-03-01" "2014-04-01" "2014-05-01" "2014-06-01" "2014-07-01" "2014-08-01" "2014-09-01" "2014-10-01" "2014-11-01" "2014-12-01"
+[49] "2015-01-01" "2015-02-01" "2015-03-01" "2015-04-01" "2015-05-01" "2015-06-01" "2015-07-01" "2015-08-01" "2015-09-01" "2015-10-01" "2015-11-01" "2015-12-01"
+[61] "2016-01-01"
+> plot(data$SURA, data$Date)
+> plot(data$Date, data$SURA)
+> plot(Afirme.Bajio ~ Azteca)
+Error in eval(expr, envir, enclos) : object 'Afirme.Bajio' not found
+> plot(Afirme.Bajio ~ Azteca, data)
+> plot(Afirme.Bajio ~ Azteca, data$Date)
+Error in eval(expr, envir, enclos) : object 'Afirme.Bajio' not found
+> plot(data$Afirme.Bajio ~ data$Azteca, data$Date)
+Error in data$Afirme.Bajio : $ operator is invalid for atomic vectors
+> plot.ts(data)
+Error in plotts(x = x, y = y, plot.type = plot.type, xy.labels = xy.labels,  : 
+  cannot plot more than 10 series as "multiple"
+> plot.ts(data$SURA, data$Banamex)
+> plot.ts(data$SURA, data$Date)
+> 
